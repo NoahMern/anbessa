@@ -1,0 +1,14 @@
+
+(using "web")
+
+(defcomp name [args] :style :callbacks :params)
+
+;HTML
+(page 
+     :style [] 
+     (nav))
+
+;CSS
+(defstyle name {:bgcolor color.blue})
+
+;js

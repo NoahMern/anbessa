@@ -1,0 +1,1 @@
+function print_(x){console.log(x); return x;}print_("Hello, world")

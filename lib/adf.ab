@@ -1,0 +1,11 @@
+
+; this is a code to parse anbessa data format
+
+;lexer
+
+(defn lexer.next [code index] 
+  (let [result nil] 
+    (if #(index > (len code) (throw :index-err "Index out of range")))
+    (case
+        (set result (consume-singe code index)) [result (+ 1 index)]
+        (set result (consume-number code index)) [result (+ (len result) index)]))))

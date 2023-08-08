@@ -1,0 +1,20 @@
+
+{
+    :name "test project"
+    :version "2.1.3-alpha.1+build.123"
+    ;:description  "this is a test file"
+
+    :main "code.ab"
+
+    :engine
+
+    ;:dep [
+    ;    "project-name"
+    ;    "git-path"
+    ;]
+
+    ;:sub [
+    ;    "name"
+    ;    "name"
+    ;]
+}

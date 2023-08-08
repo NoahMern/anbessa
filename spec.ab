@@ -1,0 +1,64 @@
+
+(using "engine")
+
+(module "name")
+(include "")
+(import "")
+(defconst "name")
+(def name expr)
+(set name expr)
+(if expr then fail)
+(while expr then)
+(repeat expr)
+(for-each seq expr)
+(do exprs)
+(let bind expr)
+(cond )
+(when )
+(case )
+
+
+(fn )
+(defn name [args with destructuring] [constraints for every arg] expr)
+
+
+(defmacro)
+(expand )
+(expand-all )
+
+(throw)
+(try expr (catch x) (catch y) (finally))
+
+(deftype)
+(defrecord)
+(defprotocol)
+(impl)
+(defmulti)
+(defmethod)
+
+
++ - * / % // max min inc dec == > < >= <= != not and or len
+map reduce filter first last second rest get -> ->>
+print input 
+int? str? float? keyword? map? vec? bool? nil? fn? falsely? even? odd? neg? pos? zero? type
+rand rand-int rand-choice prob-choice
+zip enumerate permutation combination cartesian
+split trim trim-left trim-right lines join reverse has? has-prefix? has-suffix? replace replace-all find
+apply partial
+defmulti multi
+deftype defrecord istype?
+protocol implements? impl
+
+(defmacro for-each [val seq code] [engine.symbol engine.expr engine.expr]
+  (let [seq-val 'seq
+        'val (seq/next seq-val)]
+       (while 'val 
+         (do 'code (seq/next seq-val)))))
+
+(for-each user [:admin :casual :naive]
+   (print user))
+
+(let [seq-val [:admin :casual :naive]
+      user (seq/next seq-val)
+      (while user (do (print user) 
+                     (seq/next seq-val))))
